@@ -12,7 +12,7 @@ export function ComparisonGridSection() {
           <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">
             How The Care Reserve <em className="text-[#d95c47]">Compares</em>
           </h2>
-          <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-white/90 max-w-3xl mx-auto mb-4">
             One System vs. The Patchwork
           </p>
         </div>
@@ -34,11 +34,18 @@ export function ComparisonGridSection() {
         </div>
 
         {/* Comparison Table */}
-        <div className="max-w-[58.32rem] mx-auto">
+        <div className="max-w-[44.625rem] mx-auto">
           {/* Desktop Table */}
           <div className="hidden md:block overflow-x-auto">
             <div className="bg-[#f4f1ea] rounded-lg p-6">
-              <table className="w-full">
+              <table className="w-full" style={{ tableLayout: 'fixed' }}>
+                <colgroup>
+                  <col style={{ width: '35%' }} />
+                  <col style={{ width: '16.25%' }} />
+                  <col style={{ width: '16.25%' }} />
+                  <col style={{ width: '16.25%' }} />
+                  <col style={{ width: '16.25%' }} />
+                </colgroup>
                 <thead>
                   <tr className="border-b-2 border-[#0e2b47]/20">
                     <th className="text-left py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
@@ -55,13 +62,22 @@ export function ComparisonGridSection() {
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
-                      Nanny Agencies
+                      <div className="flex flex-col">
+                        <span>Nanny</span>
+                        <span>Agencies</span>
+                      </div>
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
-                      Payroll Platforms
+                      <div className="flex flex-col">
+                        <span>Payroll</span>
+                        <span>Platforms</span>
+                      </div>
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
-                      Gig Apps
+                      <div className="flex flex-col">
+                        <span>Gig</span>
+                        <span>Apps</span>
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -77,7 +93,7 @@ export function ComparisonGridSection() {
                     { feature: 'No Hidden Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
                   ].map((row, index) => (
                     <tr key={index} className="border-b border-[#0e2b47]/10">
-                      <td className="py-4 px-4 text-[#0e2b47]">{row.feature}</td>
+                      <td className="py-4 px-4 text-[#0e2b47] text-left">{row.feature}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.tcr)}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.agencies)}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.payroll)}</td>
@@ -129,7 +145,7 @@ export function ComparisonGridSection() {
         {/* Explanatory Notes */}
         <div className="max-w-4xl mx-auto mt-12 space-y-6 pl-8 md:pl-12">
           <div>
-            <h3 className="font-serif text-lg mb-2">
+            <h3 className="font-serif text-lg mb-1">
               <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Gig Apps</span>
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -137,15 +153,15 @@ export function ComparisonGridSection() {
             </p>
           </div>
           <div>
-            <h3 className="font-serif text-lg mb-2">
-              <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Agencies</span>
+            <h3 className="font-serif text-lg mb-1">
+              <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Nanny Agencies</span>
             </h3>
             <p className="text-white text-base leading-relaxed">
               Agencies usually stop supporting families after placement — no payroll, tax, or backup support.
             </p>
           </div>
           <div>
-            <h3 className="font-serif text-lg mb-2">
+            <h3 className="font-serif text-lg mb-1">
               <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Payroll Platforms</span>
             </h3>
             <p className="text-white text-base leading-relaxed">

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 export function HowItWorksSection() {
   return (
-    <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-[#f4f1ea]">
+    <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-[#f4f1ea]">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-serif text-[#0e2b47] mb-4">

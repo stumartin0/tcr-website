@@ -28,14 +28,6 @@ export function MissionSection() {
             <p>
               We're the first platform that makes this simple.
             </p>
-            
-            <p className="italic">
-              Not an agency. Not a gig app.
-            </p>
-            
-            <p className="font-bold">
-              The operating system for in-home childcare.
-            </p>
           </div>
         </div>
       </div>

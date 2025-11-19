@@ -1,6 +1,7 @@
 "use client"
 
 import { Check } from 'lucide-react'
+import Image from 'next/image'
 
 export function TwoCardsSection() {
   return (
@@ -18,7 +19,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Have a nanny?</h3>
-              <h4 className="text-muted-foreground text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4">
                 Bring your own caregiver — skip the waitlist.
               </h4>
             </div>
@@ -27,22 +28,22 @@ export function TwoCardsSection() {
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Fast employer setup</p>
-                  <p className="text-sm text-muted-foreground">— EIN, payroll, worker's comp coverage in minutes</p>
+                  <p className="font-semibold text-[#0e2b47]">Fast employer setup</p>
+                  <p className="text-sm text-[#0e2b47]/70">— EIN, payroll, worker's comp coverage in minutes</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Stay compliant</p>
-                  <p className="text-sm text-muted-foreground">— tax withholdings, time-tracking, local requirements</p>
+                  <p className="font-semibold text-[#0e2b47]">Stay compliant</p>
+                  <p className="text-sm text-[#0e2b47]/70">— tax withholdings, time-tracking, local requirements</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">BYO discount</p>
-                  <p className="text-sm text-muted-foreground">— save with our Bring-Your-Own program</p>
+                  <p className="font-semibold text-[#0e2b47]">BYO discount</p>
+                  <p className="text-sm text-[#0e2b47]/70">— save with our Bring-Your-Own program</p>
                 </div>
               </li>
             </ul>
@@ -56,7 +57,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Still looking?</h3>
-              <h4 className="text-muted-foreground text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4">
                 Meet trusted, experienced caregivers in your area.
               </h4>
             </div>
@@ -65,22 +66,22 @@ export function TwoCardsSection() {
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">TCR Verified™ & local</p>
-                  <p className="text-sm text-muted-foreground">— experienced, background-checked, CPR/First-aid certified</p>
+                  <p className="font-semibold text-[#0e2b47]">TCR Verified™ & local</p>
+                  <p className="text-sm text-[#0e2b47]/70">— experienced, background-checked, CPR/First-aid certified</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Always your choice</p>
-                  <p className="text-sm text-muted-foreground">— never auto-assigned, you decide who provides care</p>
+                  <p className="font-semibold text-[#0e2b47]">Always your choice</p>
+                  <p className="text-sm text-[#0e2b47]/70">— never auto-assigned, you decide who provides care</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Trial first</p>
-                  <p className="text-sm text-muted-foreground">— hire only when you find the right fit</p>
+                  <p className="font-semibold text-[#0e2b47]">Trial first</p>
+                  <p className="text-sm text-[#0e2b47]/70">— hire only when you find the right fit</p>
                 </div>
               </li>
             </ul>
@@ -109,7 +110,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Want a nanny-share?</h3>
-              <h4 className="text-muted-foreground text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4">
                 Share a nanny legally, save money together.
               </h4>
             </div>
@@ -118,22 +119,22 @@ export function TwoCardsSection() {
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">SharedCare™</p>
-                  <p className="text-sm text-muted-foreground">— two families, either home, one trusted caregiver</p>
+                  <p className="font-semibold text-[#0e2b47]">SharedCare™</p>
+                  <p className="text-sm text-[#0e2b47]/70">— two families, either home, one trusted caregiver</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Dual payroll</p>
-                  <p className="text-sm text-muted-foreground">— each family pays their share with full W-2 compliance</p>
+                  <p className="font-semibold text-[#0e2b47]">Dual payroll</p>
+                  <p className="text-sm text-[#0e2b47]/70">— each family pays their share with full W-2 compliance</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Real savings</p>
-                  <p className="text-sm text-muted-foreground">— steady income for caregivers, lower cost for you</p>
+                  <p className="font-semibold text-[#0e2b47]">Real savings</p>
+                  <p className="text-sm text-[#0e2b47]/70">— steady income for caregivers, lower cost for you</p>
                 </div>
               </li>
             </ul>
@@ -149,7 +150,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Need backup you can trust?</h3>
-              <h4 className="text-muted-foreground text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4">
                 Plan your coverage before you need it.
               </h4>
             </div>
@@ -158,22 +159,22 @@ export function TwoCardsSection() {
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Reserve Team™</p>
-                  <p className="text-sm text-muted-foreground">— your pre-selected backups, always the first call</p>
+                  <p className="font-semibold text-[#0e2b47]">Reserve Team™</p>
+                  <p className="text-sm text-[#0e2b47]/70">— your pre-selected backups, always the first call</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Standby Care™</p>
-                  <p className="text-sm text-muted-foreground">— TCR Verified™ caregivers opt-in daily, always your choice</p>
+                  <p className="font-semibold text-[#0e2b47]">Standby Care™</p>
+                  <p className="text-sm text-[#0e2b47]/70">— TCR Verified™ caregivers opt-in daily, always your choice</p>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-5 h-5 text-[#7c8e72] flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold">Fair pricing</p>
-                  <p className="text-sm text-muted-foreground">— same hourly caregiver rate, no inflated emergency costs</p>
+                  <p className="font-semibold text-[#0e2b47]">Fair pricing</p>
+                  <p className="text-sm text-[#0e2b47]/70">— same hourly caregiver rate, no inflated emergency costs</p>
                 </div>
               </li>
             </ul>
@@ -181,9 +182,19 @@ export function TwoCardsSection() {
         </div>
         
         <div className="mt-[84px] mb-[52px] text-center">
-          <p className="text-xl text-white font-serif">
+          <p className="text-xl text-white font-serif max-w-3xl mx-auto">
             The Care Reserve makes in-home childcare simple, secure, and tailored to your family — so you can feel confident, and your children can <em className="text-[#d95c47]">thrive</em>.
           </p>
+        </div>
+        
+        <div className="text-center">
+          <Image 
+            src="/image(1).png" 
+            alt="" 
+            width={48} 
+            height={48} 
+            className="mx-auto mb-6"
+          />
         </div>
       </div>
     </section>

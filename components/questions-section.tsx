@@ -20,7 +20,7 @@ export function QuestionsSection() {
                 <span className="text-[#0e2b47]">Compare us</span>
               </Link>
             </h3>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-[#0e2b47]/70 text-sm">
               See how The Care Reserve stacks up against agencies, gig apps, and do-it-yourself payroll — and feel the difference.
             </p>
           </div>
@@ -53,11 +53,11 @@ export function QuestionsSection() {
                 <span className="text-[#0e2b47]">Contact us</span>
               </Link>
             </h3>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-[#0e2b47]/70 text-sm mb-4">
               Monday through Friday<br/>
               8:30AM - 6:00PM EST
             </p>
-            <p className="text-sm">
+            <p className="text-sm text-[#0e2b47]">
               <Link href="tel:8005551234" className="hover:text-[#d95c47] transition block">(800) 555-1234</Link>
               <Link href="mailto:support@thecarereserve.com" className="hover:text-[#d95c47] transition block break-all">
                 support@thecarereserve.com

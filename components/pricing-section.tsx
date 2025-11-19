@@ -48,37 +48,37 @@ export function PricingSection() {
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>EIN setup, legal pay, and onboarding</p>
+                <p className="text-[#0e2b47]">EIN setup, legal pay, and onboarding</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Automated W-2 payroll and tax filings</p>
+                <p className="text-[#0e2b47]">Automated W-2 payroll and tax filings</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Trusted backup care with Reserve Team™ & Standby Care™</p>
+                <p className="text-[#0e2b47]">Trusted backup care with Reserve Team™ & Standby Care™</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Weekly invoices, monthly statements & detailed hours reports</p>
+                <p className="text-[#0e2b47]">Weekly invoices, monthly statements & detailed hours reports</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Dependent Care FSA & Childcare Tax Credit made easy</p>
+                <p className="text-[#0e2b47]">Dependent Care FSA & Childcare Tax Credit made easy</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Integrated, real-time state & local compliance coverage</p>
+                <p className="text-[#0e2b47]">Integrated, real-time state & local compliance coverage</p>
               </li>
             </ul>
             <div className="flex justify-center">
@@ -100,7 +100,7 @@ export function PricingSection() {
                 <p className="text-sm text-[#0e2b47]">{'<'}30 hrs/week</p>
                 <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
               </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow">
+              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
                 Covers shift level infrastructure — adaptive compliance, caregiver rewards, and backup coverage.
               </p>
               <div className="border-t pt-4 mb-4" />
@@ -113,7 +113,7 @@ export function PricingSection() {
                 <p className="text-sm text-[#0e2b47]">30+ hrs/week</p>
                 <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
               </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow">
+              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
                 Automatically reduced hourly rate — same adaptive compliance, caregiver rewards, and backup coverage.
               </p>
               <div className="border-t pt-4 mb-4" />
@@ -126,7 +126,7 @@ export function PricingSection() {
                 <p className="text-sm text-[#0e2b47]">Per Family</p>
                 <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
               </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow">
+              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
                 Share a nanny with another household for up to six kids. Shifts are hosted in either home with full compliance.
               </p>
               <div className="border-t pt-4 mb-4" />
@@ -139,7 +139,7 @@ export function PricingSection() {
                 <p className="text-sm text-[#0e2b47]">Backup</p>
                 <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
               </div>
-              <p className="text-sm text-muted-foreground mb-4 flex-grow">
+              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
                 Backup care if no one from your Reserve Team™ is available. Helps us reward caregiver availability.
               </p>
               <div className="border-t pt-4 mb-4" />
@@ -165,25 +165,25 @@ export function PricingSection() {
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Skip the waitlist and start immediately</p>
+                <p className="text-[#0e2b47]">Skip the waitlist and start immediately</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Unlock legal payroll, tax savings, backup care, and full compliance</p>
+                <p className="text-[#0e2b47]">Unlock legal payroll, tax savings, backup care, and full compliance</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>Earn referral bonuses for families and caregivers you refer</p>
+                <p className="text-[#0e2b47]">Earn referral bonuses for families and caregivers you refer</p>
               </li>
               <li className="flex items-start gap-2">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4" />
                 </div>
-                <p>You save money, your caregiver gains protection</p>
+                <p className="text-[#0e2b47]">You save money, your caregiver gains protection</p>
               </li>
             </ul>
             
