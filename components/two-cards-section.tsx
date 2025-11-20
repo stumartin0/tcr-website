@@ -8,7 +8,7 @@ export function TwoCardsSection() {
     <section className="bg-[#0e2b47] py-8">
       <div className="container mx-auto px-4">
         <p className="text-center text-xl mt-[52px] mb-[84px] text-white font-serif">
-          Whether you are bringing your nanny or starting fresh, The Care Reserve <em className="text-[#d95c47]">adapts</em> to your needs.
+          Already have a caregiver or still searching? The Care Reserve <em className="text-[#d95c47]">adapts</em> to your needs.
         </p>
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-[#f4f1ea] rounded-lg p-8 pt-[21px]">
@@ -19,7 +19,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Have a nanny?</h3>
-              <h4 className="text-[#0e2b47]/70 text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4 font-sans">
                 Bring your own caregiver — skip the waitlist.
               </h4>
             </div>
@@ -57,7 +57,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Still looking?</h3>
-              <h4 className="text-[#0e2b47]/70 text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4 font-sans">
                 Meet trusted, experienced caregivers in your area.
               </h4>
             </div>
@@ -110,7 +110,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Want a nanny-share?</h3>
-              <h4 className="text-[#0e2b47]/70 text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4 font-sans">
                 Share a nanny legally, save money together.
               </h4>
             </div>
@@ -140,9 +140,9 @@ export function TwoCardsSection() {
             </ul>
           </div>
           
-          <div className="bg-[#f4f1ea] rounded-lg p-8">
+          <div className="bg-[#f4f1ea] rounded-lg px-8 pb-8 pt-[26px]">
             <div className="mb-6">
-              <div className="w-10 h-10 mb-4">
+              <div className="w-[46px] h-[46px] mb-[14px]">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="w-full h-full text-[#d95c47]">
                   <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="3" fill="none"/>
                   <path d="M24 12V24L32 28" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
@@ -150,7 +150,7 @@ export function TwoCardsSection() {
                 </svg>
               </div>
               <h3 className="text-[#0e2b47] text-2xl mb-2 font-serif">Need backup you can trust?</h3>
-              <h4 className="text-[#0e2b47]/70 text-base mb-4">
+              <h4 className="text-[#0e2b47]/70 text-base mb-4 font-sans">
                 Plan your coverage before you need it.
               </h4>
             </div>

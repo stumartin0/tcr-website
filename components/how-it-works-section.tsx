@@ -32,8 +32,8 @@ export function HowItWorksSection() {
         </div>
         
         {/* Caption */}
-        <p className="text-sm font-serif text-[#0e2b47] text-center mt-[92px] mb-6 md:mt-8 md:mb-12">
-          manage your family's care from <em className="text-[#d95c47]">any</em> device.
+        <p className="text-[16px] font-serif text-[#0e2b47] text-center mt-[92px] mb-6 md:mt-8 md:mb-12">
+          Manage your family's care from <em className="text-[#d95c47]">any</em> device.
         </p>
       </div>
       
@@ -94,7 +94,7 @@ export function HowItWorksSection() {
                 Build Your Backup Plan — with Reserve Team™
               </h3>
               <p className="text-base text-[#0e2b47] leading-relaxed">
-                Add up to 4 trusted caregivers to your Reserve Team™ for planned backups. Access Standby Care™ for short-notice coverage when your Reserve Team isn't available.
+                Bring your own or invite TCR Verified™ caregivers to build your Reserve Team™ — your first-call for backup. When unavailable, access Standby Care™: you choose who comes, never auto-assigned.
               </p>
             </div>
           </div>

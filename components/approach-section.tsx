@@ -15,7 +15,7 @@ const cards = [
   {
     image: '/toys-display-for-childcare.jpg',
     title: 'Only Pay for the Care You Use',
-    description: "Flexible hourly rates. No hidden fees. 100% of your caregiver's wage goes to them."
+    description: "Flexible hourly rates. No surprise fees. 100% of your caregiver's wage goes to them."
   }
 ]
 

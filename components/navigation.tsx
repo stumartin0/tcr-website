@@ -10,7 +10,7 @@ export function Navigation() {
   const [supportOpen, setSupportOpen] = useState(false)
 
   return (
-    <nav className="w-full border-b border-border bg-[#0e2b47] sticky top-0 z-50">
+    <nav className="w-full border-b border-[#d95c47] bg-[#0e2b47] sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-0.5">
           {/* Left: Logo */}

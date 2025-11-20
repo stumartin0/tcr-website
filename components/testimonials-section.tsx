@@ -6,7 +6,7 @@ export function TestimonialsSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-8">
             <div className="bg-[#f4f1ea] rounded-lg p-6 border-2 border-[#0e2b47]">
-              <p className="text-xl italic mb-4">
+              <p className="text-xl italic mb-4 text-[#0e2b47]">
                 "We love our nanny, but paying her was a total nightmare. After countless nights confirming hours and calculating taxes we found The Care Reserve and it's been a game-changer... our nanny get's paid automatically, and we just schedule the days she's needed."
               </p>
               <div className="flex items-center gap-4">
@@ -16,25 +16,25 @@ export function TestimonialsSection() {
                   className="w-16 h-16 rounded-full"
                 />
                 <div>
-                  <p className="font-semibold">Taylor M.</p>
-                  <p className="text-sm text-muted-foreground">Parent, Atlanta</p>
+                  <p className="font-semibold font-serif text-[#0e2b47]">Taylor M.</p>
+                  <p className="text-sm text-[#0e2b47]/70">Parent, Atlanta</p>
                 </div>
               </div>
             </div>
             
             <div className="bg-[#f4f1ea] rounded-lg p-6 border-2 border-[#0e2b47]">
-              <p className="text-xl italic mb-4">
+              <p className="text-xl italic mb-4 text-[#0e2b47]">
                 "Switching from daycare to a nanny for our kids was a big change, and we worried what would happen when our nanny called out. Knowing we have built in backup care but always choose who comes to our home made the transition much less stressful."
               </p>
               <div className="flex items-center gap-4">
                 <img 
-                  src="/parent-profile-photo.jpg" 
+                  src="/ai-image-woman.avif" 
                   alt="Caitlin E." 
-                  className="w-16 h-16 rounded-full"
+                  className="w-16 h-16 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-semibold">Caitlin E.</p>
-                  <p className="text-sm text-muted-foreground">Parent, Atlanta</p>
+                  <p className="font-semibold font-serif text-[#0e2b47]">Caitlin E.</p>
+                  <p className="text-sm text-[#0e2b47]/70">Parent, Atlanta</p>
                 </div>
               </div>
             </div>

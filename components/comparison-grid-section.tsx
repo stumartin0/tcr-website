@@ -15,7 +15,7 @@ export function ComparisonGridSection() {
     { feature: 'SharedCare™ (Legal Nanny Share)', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
     { feature: 'Tax Savings + FSA Support', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
     { feature: 'All-Inclusive Invoice', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
-    { feature: 'No Hidden Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
+    { feature: 'No Surprise Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
   ]
 
   const visibleRows = allRows.slice(0, 5)
@@ -78,19 +78,19 @@ export function ComparisonGridSection() {
                         />
                       </div>
                     </th>
-                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
-                      <div className="flex flex-col">
-                        <span>Payroll</span>
-                        <span>Platforms</span>
-                      </div>
-                    </th>
-                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
+                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-normal text-lg">
                       <div className="flex flex-col">
                         <span>Nanny</span>
                         <span>Agencies</span>
                       </div>
                     </th>
-                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
+                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-normal text-lg">
+                      <div className="flex flex-col">
+                        <span>Payroll</span>
+                        <span>Platforms</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-normal text-lg">
                       <div className="flex flex-col">
                         <span>Gig</span>
                         <span>Apps</span>
@@ -102,10 +102,42 @@ export function ComparisonGridSection() {
                   {allRows.map((row, index) => (
                     <tr key={index} className="border-b border-[#0e2b47]/10">
                       <td className="py-4 px-4 text-[#0e2b47] text-left">{row.feature}</td>
-                      <td className="py-4 px-4 text-center">{getIcon(row.tcr)}</td>
-                      <td className="py-4 px-4 text-center">{getIcon(row.payroll)}</td>
-                      <td className="py-4 px-4 text-center">{getIcon(row.agencies)}</td>
-                      <td className="py-4 px-4 text-center">{getIcon(row.gig)}</td>
+                      <td className="py-4 px-4 text-center relative group">
+                        <div className="inline-flex items-center justify-center cursor-help">
+                          {getIcon(row.tcr)}
+                        </div>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#0e2b47] text-white text-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none whitespace-nowrap z-50 max-w-xs">
+                          <span className="font-sans">{getRowLabel(row.feature, 'tcr')}</span>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-0.5 border-4 border-transparent border-t-[#0e2b47]"></div>
+                        </div>
+                      </td>
+                      <td className="py-4 px-4 text-center relative group">
+                        <div className="inline-flex items-center justify-center cursor-help">
+                          {getIcon(row.agencies)}
+                        </div>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#0e2b47] text-white text-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none whitespace-nowrap z-50 max-w-xs">
+                          <span className="font-sans">{getRowLabel(row.feature, 'agencies')}</span>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-0.5 border-4 border-transparent border-t-[#0e2b47]"></div>
+                        </div>
+                      </td>
+                      <td className="py-4 px-4 text-center relative group">
+                        <div className="inline-flex items-center justify-center cursor-help">
+                          {getIcon(row.payroll)}
+                        </div>
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#0e2b47] text-white text-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none whitespace-nowrap z-50 max-w-xs">
+                          <span className="font-sans">{getRowLabel(row.feature, 'payroll')}</span>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-0.5 border-4 border-transparent border-t-[#0e2b47]"></div>
+                        </div>
+                      </td>
+                      <td className="py-4 px-4 text-center relative group">
+                        <div className="inline-flex items-center justify-center cursor-help">
+                          {getIcon(row.gig)}
+                        </div>
+                        <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-[#0e2b47] text-white text-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none whitespace-nowrap z-50 max-w-xs">
+                          <span className="font-sans">{getRowLabel(row.feature, 'gig')}</span>
+                          <div className="absolute top-full right-4 -mt-0.5 border-4 border-transparent border-t-[#0e2b47]"></div>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -128,17 +160,17 @@ export function ComparisonGridSection() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#0e2b47] text-sm">Payroll Platforms</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'payroll')}</span>
-                      {getIcon(row.payroll)}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
                     <span className="text-[#0e2b47] text-sm">Nanny Agencies</span>
                     <div className="flex items-center gap-2">
                       <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'agencies')}</span>
                       {getIcon(row.agencies)}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#0e2b47] text-sm">Payroll Platforms</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'payroll')}</span>
+                      {getIcon(row.payroll)}
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
@@ -213,7 +245,7 @@ export function ComparisonGridSection() {
         {/* Explanatory Notes */}
         <div className="max-w-4xl mx-auto mt-12 space-y-6 pl-8 md:pl-12">
           <div>
-            <h3 className="font-serif text-lg mb-1">
+            <h3 className="font-sans text-lg mb-1">
               <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Gig Apps</span>
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -221,7 +253,7 @@ export function ComparisonGridSection() {
             </p>
           </div>
           <div>
-            <h3 className="font-serif text-lg mb-1">
+            <h3 className="font-sans text-lg mb-1">
               <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Nanny Agencies</span>
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -229,7 +261,7 @@ export function ComparisonGridSection() {
             </p>
           </div>
           <div>
-            <h3 className="font-serif text-lg mb-1">
+            <h3 className="font-sans text-lg mb-1">
               <span className="text-[#7c8e72]">—</span> <span className="text-[#e07856]">On Payroll Platforms</span>
             </h3>
             <p className="text-white text-base leading-relaxed">
@@ -320,7 +352,7 @@ function getRowLabel(feature: string, column: 'tcr' | 'agencies' | 'payroll' | '
     'SharedCare™ (Legal Nanny Share)': {
       tcr: 'Yes — dual W-2 compliant',
       agencies: 'No — not offered',
-      payroll: 'No — single employer only',
+      payroll: 'No legal multi-employer compliance',
       gig: 'No — not offered'
     },
     'Tax Savings + FSA Support': {
@@ -335,7 +367,7 @@ function getRowLabel(feature: string, column: 'tcr' | 'agencies' | 'payroll' | '
       payroll: 'Partial — payroll reports only',
       gig: 'No — scattered receipts'
     },
-    'No Hidden Fees': {
+    'No Surprise Fees': {
       tcr: 'Yes — transparent pricing',
       agencies: 'Varies — placement fees common',
       payroll: 'Varies — per-payroll charges',

@@ -202,7 +202,7 @@ export function PricingSection() {
               onTouchEnd={handleTouchEnd}
             >
               <div className="text-center mb-2">
-                <h3 className="font-serif text-lg text-[#0e2b47]">{activeCard.title}</h3>
+                <h3 className="font-serif text-2xl text-[#0e2b47]">{activeCard.title}</h3>
                 <p className="text-sm text-[#0e2b47]">
                   {activeCard.id === 'part-time' ? '<30 hrs/week' : 
                    activeCard.id === 'full-time' ? '30+ hrs/week' :
@@ -229,7 +229,7 @@ export function PricingSection() {
             {usageTiers.map((tier) => (
               <div key={tier.id} className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
                 <div className="text-center mb-2">
-                  <h3 className={`font-serif text-lg text-[#0e2b47] ${tier.id === 'standby' ? 'whitespace-nowrap' : ''}`}>
+                  <h3 className={`font-serif text-2xl text-[#0e2b47] ${tier.id === 'standby' ? 'whitespace-nowrap' : ''}`}>
                     {tier.title}
                   </h3>
                   <p className="text-sm text-[#0e2b47]">

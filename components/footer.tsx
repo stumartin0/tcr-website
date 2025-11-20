@@ -90,7 +90,7 @@ export default function Footer() {
                 <h4 className="font-serif text-[#D95C47] text-[19px] mb-4">{section.title}</h4>
                 <nav className="flex flex-col space-y-2">
                   {section.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-sm hover:text-white transition-colors">
+                    <Link key={link.href} href={link.href} className="text-sm hover:text-[#d95c47] transition-colors">
                       {link.label}
                     </Link>
                   ))}
@@ -105,7 +105,7 @@ export default function Footer() {
                 <h4 className="font-serif text-[#D95C47] text-[19px] mb-4">{section.title}</h4>
                 <nav className="flex flex-col space-y-2">
                   {section.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-sm hover:text-white transition-colors">
+                    <Link key={link.href} href={link.href} className="text-sm hover:text-[#d95c47] transition-colors">
                       {link.label}
                     </Link>
                   ))}
@@ -135,7 +135,7 @@ export default function Footer() {
                 >
                   <nav className="flex flex-col space-y-2 pl-4">
                     {section.links.map((link) => (
-                      <Link key={link.href} href={link.href} className="text-sm hover:text-white transition-colors">
+                      <Link key={link.href} href={link.href} className="text-sm hover:text-[#d95c47] transition-colors">
                         {link.label}
                       </Link>
                     ))}
@@ -201,19 +201,19 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
-            <p className="text-sm text-center md:text-left">© {currentYear} The Care Reserve</p>
+            <p className="text-sm text-center md:text-left">© {currentYear} The Care Reserve<sup className="text-[0.85em] leading-none relative top-[-0.1em]">™</sup></p>
 
             <div className="flex items-center gap-4 text-sm flex-wrap justify-center">
-              <Link href="/terms" className="hover:text-white transition-colors whitespace-nowrap">
+              <Link href="/terms" className="hover:text-[#d95c47] transition-colors whitespace-nowrap">
                 Terms of Use
               </Link>
-              <Link href="/privacy" className="hover:text-white transition-colors whitespace-nowrap">
+              <Link href="/privacy" className="hover:text-[#d95c47] transition-colors whitespace-nowrap">
                 Privacy Policy
               </Link>
-              <Link href="/licensing" className="hover:text-white transition-colors whitespace-nowrap">
+              <Link href="/licensing" className="hover:text-[#d95c47] transition-colors whitespace-nowrap">
                 Licensing
               </Link>
-              <Link href="/accessibility" className="hover:text-white transition-colors whitespace-nowrap">
+              <Link href="/accessibility" className="hover:text-[#d95c47] transition-colors whitespace-nowrap">
                 Accessibility
               </Link>
             </div>

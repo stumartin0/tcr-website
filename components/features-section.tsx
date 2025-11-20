@@ -15,12 +15,12 @@ const features = [
   {
     icon: '✓',
     title: 'You set the rate',
-    description: '— 100% of wages go directly to your caregiver'
+    description: '— 100% of wages go to your caregiver'
   },
   {
     icon: '✓',
-    title: 'EIN, W-2 payroll, workers\' comp',
-    description: '— setup in just minutes'
+    title: 'Become a legal employer',
+    description: '— set up in just minutes'
   },
   {
     icon: '✓',
@@ -55,7 +55,7 @@ export function FeaturesSection() {
                 </div>
                 <div>
                   <p className="text-[#0e2b47]">
-                    <span className="font-semibold">{feature.title}</span>
+                    <span className="font-normal font-serif text-lg">{feature.title}</span>
                     <br />
                     {feature.description}
                   </p>

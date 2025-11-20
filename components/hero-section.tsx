@@ -13,16 +13,16 @@ export function HeroSection() {
             <div className="flex flex-col gap-2 md:gap-3">
               <div className="relative rounded-lg overflow-hidden h-[160px] md:h-[271px]">
                 <Image 
-                  src="/caregiver-child-activity.png" 
-                  alt="Caregiver and child learning together" 
+                  src="/toy-shelves-playroom.jpg" 
+                  alt="Organized playroom with colorful toys and shelving" 
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="relative rounded-lg overflow-hidden h-[240px] md:h-[407px]">
                 <Image 
-                  src="/caregiver-with-children.jpg" 
-                  alt="Caregiver with children" 
+                  src="/in-home-childcare.jpg" 
+                  alt="In-home childcare" 
                   fill
                   className="object-cover"
                 />
@@ -32,16 +32,16 @@ export function HeroSection() {
             <div className="flex flex-col gap-2 md:gap-3">
               <div className="relative rounded-lg overflow-hidden h-[240px] md:h-[407px]">
                 <Image 
-                  src="/in-home-childcare.jpg" 
-                  alt="In-home childcare" 
+                  src="/caregiver-with-children.jpg" 
+                  alt="Caregiver with children" 
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="relative rounded-lg overflow-hidden h-[160px] md:h-[271px]">
                 <Image 
-                  src="/toy-shelves-playroom.jpg" 
-                  alt="Organized playroom with colorful toys and shelving" 
+                  src="/caregiver-child-activity.png" 
+                  alt="Caregiver and child learning together" 
                   fill
                   className="object-cover"
                 />
