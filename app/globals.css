@@ -169,4 +169,60 @@ h6 {
   .status-pending {
     @apply w-2 h-2 rounded-full bg-[#D95C47];
   }
+
+  /* Fade-in animation for tab content */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 200ms ease-in-out;
+  }
+
+  /* Hide scrollbar but maintain scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Phone mockup bezel */
+  .phone-mockup {
+    position: relative;
+    width: 375px;
+    padding: 20px 16px; /* Top/bottom for notch/home bar */
+    background: #1a1a1a; /* Phone bezel color */
+    border-radius: 50px;
+    box-shadow: 
+      0 30px 80px rgba(0, 0, 0, 0.25),
+      inset 0 0 0 12px #2a2a2a; /* Inner bezel */
+  }
+
+  .phone-mockup::before {
+    /* Notch at top */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 28px;
+    background: #1a1a1a;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .phone-screen {
+    border-radius: 40px;
+    overflow: hidden;
+  }
 }

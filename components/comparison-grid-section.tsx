@@ -1,9 +1,26 @@
 "use client"
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
 export function ComparisonGridSection() {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  const allRows = [
+    { feature: 'Trusted, Verified Caregivers', tcr: 'check', agencies: 'check', payroll: 'x', gig: 'warning' },
+    { feature: 'Backup Care with Choice', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'warning' },
+    { feature: 'Legal W-2 Payroll', tcr: 'check', agencies: 'warning', payroll: 'check', gig: 'warning' },
+    { feature: 'Full Legal Compliance', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
+    { feature: 'SharedCare™ (Legal Nanny Share)', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
+    { feature: 'Tax Savings + FSA Support', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
+    { feature: 'All-Inclusive Invoice', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
+    { feature: 'No Hidden Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
+  ]
+
+  const visibleRows = allRows.slice(0, 5)
+  const collapsibleRows = allRows.slice(5)
+
   return (
     <section className="bg-[#0e2b47] pt-8 md:pt-12 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -25,7 +42,7 @@ export function ComparisonGridSection() {
           </div>
           <div className="flex items-center gap-2">
             {getIcon('warning')}
-            <span className="text-white text-base font-serif">Partial</span>
+            <span className="text-white text-base font-serif">Sometimes</span>
           </div>
           <div className="flex items-center gap-2">
             {getIcon('x')}
@@ -63,14 +80,14 @@ export function ComparisonGridSection() {
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
                       <div className="flex flex-col">
-                        <span>Nanny</span>
-                        <span>Agencies</span>
+                        <span>Payroll</span>
+                        <span>Platforms</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
                       <div className="flex flex-col">
-                        <span>Payroll</span>
-                        <span>Platforms</span>
+                        <span>Nanny</span>
+                        <span>Agencies</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-4 text-[#0e2b47] font-serif font-semibold text-lg">
@@ -82,21 +99,12 @@ export function ComparisonGridSection() {
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    { feature: 'Legal W-2 Payroll', tcr: 'check', agencies: 'check', payroll: 'check', gig: 'warning' },
-                    { feature: 'Full Legal Compliance', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-                    { feature: 'Trusted, Verified Caregivers', tcr: 'check', agencies: 'warning', payroll: 'x', gig: 'warning' },
-                    { feature: 'Backup Care with Choice', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'warning' },
-                    { feature: 'SharedCare™ (Legal Nanny Share)', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
-                    { feature: 'Tax Savings + FSA Support', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-                    { feature: 'All-Inclusive Invoice', tcr: 'check', agencies: 'x', payroll: 'warning', gig: 'x' },
-                    { feature: 'No Hidden Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-                  ].map((row, index) => (
+                  {allRows.map((row, index) => (
                     <tr key={index} className="border-b border-[#0e2b47]/10">
                       <td className="py-4 px-4 text-[#0e2b47] text-left">{row.feature}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.tcr)}</td>
-                      <td className="py-4 px-4 text-center">{getIcon(row.agencies)}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.payroll)}</td>
+                      <td className="py-4 px-4 text-center">{getIcon(row.agencies)}</td>
                       <td className="py-4 px-4 text-center">{getIcon(row.gig)}</td>
                     </tr>
                   ))}
@@ -107,38 +115,98 @@ export function ComparisonGridSection() {
 
           {/* Mobile Stacked View */}
           <div className="md:hidden space-y-6">
-            {[
-              { feature: 'Legal W-2 Payroll', tcr: 'check', agencies: 'check', payroll: 'check', gig: 'warning' },
-              { feature: 'Full Legal Compliance', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-              { feature: 'Trusted, Verified Caregivers', tcr: 'check', agencies: 'warning', payroll: 'x', gig: 'warning' },
-              { feature: 'Backup Care with Choice', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'warning' },
-              { feature: 'SharedCare™ (Legal Nanny Share)', tcr: 'check', agencies: 'x', payroll: 'x', gig: 'x' },
-              { feature: 'Tax Savings + FSA Support', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-              { feature: 'All-Inclusive Invoice', tcr: 'check', agencies: 'x', payroll: 'warning', gig: 'x' },
-              { feature: 'No Hidden Fees', tcr: 'check', agencies: 'warning', payroll: 'warning', gig: 'x' },
-            ].map((row, index) => (
+            {/* Always visible rows (1-5) */}
+            {visibleRows.map((row, index) => (
               <div key={index} className="bg-[#f4f1ea] rounded-lg p-4">
-                <h3 className="text-[#0e2b47] font-semibold mb-3">{row.feature}</h3>
+                <h3 className="text-[#0e2b47] font-normal mb-3">{row.feature}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#0e2b47] text-sm">The Care Reserve</span>
-                    {getIcon(row.tcr)}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#0e2b47] text-sm">Nanny Agencies</span>
-                    {getIcon(row.agencies)}
+                    <span className="text-[#0e2b47] text-sm font-serif border-b border-[#7c8e72] pb-0.5">The Care Reserve</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'tcr')}</span>
+                      {getIcon(row.tcr)}
+                    </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-[#0e2b47] text-sm">Payroll Platforms</span>
-                    {getIcon(row.payroll)}
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'payroll')}</span>
+                      {getIcon(row.payroll)}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#0e2b47] text-sm">Nanny Agencies</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'agencies')}</span>
+                      {getIcon(row.agencies)}
+                    </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-[#0e2b47] text-sm">Gig Apps</span>
-                    {getIcon(row.gig)}
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'gig')}</span>
+                      {getIcon(row.gig)}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
+            
+            {/* Collapsible rows (6-8) */}
+            <div 
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="space-y-6">
+                {collapsibleRows.map((row, index) => (
+                  <div key={index + 5} className="bg-[#f4f1ea] rounded-lg p-4">
+                    <h3 className="text-[#0e2b47] font-normal mb-3">{row.feature}</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#0e2b47] text-sm font-serif border-b border-[#7c8e72] pb-0.5">The Care Reserve</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'tcr')}</span>
+                          {getIcon(row.tcr)}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#0e2b47] text-sm">Nanny Agencies</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'agencies')}</span>
+                          {getIcon(row.agencies)}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#0e2b47] text-sm">Payroll Platforms</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'payroll')}</span>
+                          {getIcon(row.payroll)}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#0e2b47] text-sm">Gig Apps</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#0e2b47] text-sm">{getRowLabel(row.feature, 'gig')}</span>
+                          {getIcon(row.gig)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Toggle Button */}
+            <div className="text-center pt-2">
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#e07856] font-medium flex items-center justify-center gap-2 mx-auto hover:opacity-80 transition-opacity"
+              >
+                <span>{isExpanded ? 'Show Less' : 'See Full Comparison'}</span>
+                <span>{isExpanded ? '▲' : '▼'}</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -203,8 +271,8 @@ function getIcon(type: string) {
       )
     case 'warning':
       return (
-        <div className="inline-flex items-center justify-center w-10 h-10">
-          <svg width="38" height="38" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="inline-flex items-center justify-center w-8 h-8">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 2.66667L2.66667 26.6667H29.3333L16 2.66667Z" fill="#f0ad4e"/>
             <path d="M16 12V18.6667M16 22.6667H16.0133" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
           </svg>
@@ -221,5 +289,60 @@ function getIcon(type: string) {
     default:
       return null
   }
+}
+
+function getRowLabel(feature: string, column: 'tcr' | 'agencies' | 'payroll' | 'gig'): string {
+  const labels: Record<string, Record<string, string>> = {
+    'Trusted, Verified Caregivers': {
+      tcr: 'Yes — TCR Verified™',
+      agencies: 'Yes — agency-screened',
+      payroll: 'No — payroll only',
+      gig: 'Limited — basic checks'
+    },
+    'Backup Care with Choice': {
+      tcr: 'Yes — Reserve Team + Standby',
+      agencies: 'No — no structured backup',
+      payroll: 'No — payroll only',
+      gig: 'Maybe — if someone accepts'
+    },
+    'Legal W-2 Payroll': {
+      tcr: 'Yes — automated + compliant',
+      agencies: 'Yes — agency handles initially',
+      payroll: 'Yes — core feature',
+      gig: 'Risk — often misclassified as 1099'
+    },
+    'Full Legal Compliance': {
+      tcr: 'Yes — enforced per shift',
+      agencies: 'No — family still responsible',
+      payroll: 'No — DIY compliance',
+      gig: 'No — not provided'
+    },
+    'SharedCare™ (Legal Nanny Share)': {
+      tcr: 'Yes — dual W-2 compliant',
+      agencies: 'No — not offered',
+      payroll: 'No — single employer only',
+      gig: 'No — not offered'
+    },
+    'Tax Savings + FSA Support': {
+      tcr: 'Yes — FSA-ready docs included',
+      agencies: 'Limited — after placement ends',
+      payroll: 'Limited — reports only',
+      gig: 'No — not offered'
+    },
+    'All-Inclusive Invoice': {
+      tcr: 'Yes — one weekly invoice',
+      agencies: 'No — family handles billing',
+      payroll: 'Partial — payroll reports only',
+      gig: 'No — scattered receipts'
+    },
+    'No Hidden Fees': {
+      tcr: 'Yes — transparent pricing',
+      agencies: 'Varies — placement fees common',
+      payroll: 'Varies — per-payroll charges',
+      gig: 'No — service fees + surge pricing'
+    }
+  }
+  
+  return labels[feature]?.[column] || ''
 }
 

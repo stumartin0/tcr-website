@@ -1,3 +1,4 @@
+// Testimonials Section Component
 export function TestimonialsSection() {
   return (
     <section className="bg-[#f4f1ea] py-8">

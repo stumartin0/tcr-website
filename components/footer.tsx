@@ -146,7 +146,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end mt-4 mb-2">
+        <div className="flex justify-center lg:justify-end mt-4 mb-1">
           <div className="flex items-center gap-4">
             <Link
               href="https://facebook.com"

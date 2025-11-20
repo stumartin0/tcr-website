@@ -26,7 +26,7 @@ export function MissionSection() {
             </p>
             
             <p>
-              We're the first platform that makes this simple.
+              Now, it's finally possible.
             </p>
           </div>
         </div>

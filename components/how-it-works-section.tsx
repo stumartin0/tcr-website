@@ -5,7 +5,39 @@ import { Button } from '@/components/ui/button'
 export function HowItWorksSection() {
   return (
     <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-[#f4f1ea]">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4">
+        {/* Dashboard and Phone Images - overlapping */}
+        <div className="w-full mb-12 md:mb-16 relative">
+          {/* Dashboard Image - full width */}
+          <div className="w-full">
+            <img
+              src="/mock-family-dashboard.jpeg"
+              alt="The Care Reserve family dashboard"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
+          {/* Phone Image - positioned to overlap with bottom 20px below dashboard */}
+          <div className="absolute bottom-[-325px] md:bottom-[-220px] left-1/2 transform -translate-x-1/2 z-10 flex justify-center">
+            <div className="phone-mockup scale-[0.3] md:scale-50 origin-center">
+              <div className="phone-screen">
+                <img
+                  src="/family-dashboard-schedule-mobile.jpeg"
+                  alt="Schedule management showing hours breakdown"
+                  className="w-full h-auto rounded-[40px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Caption */}
+        <p className="text-sm font-serif text-[#0e2b47] text-center mt-[92px] mb-6 md:mt-8 md:mb-12">
+          manage your family's care from <em className="text-[#d95c47]">any</em> device.
+        </p>
+      </div>
+      
+      <div className="container mx-auto px-4 max-w-4xl mt-24 md:mt-0">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-serif text-[#0e2b47] mb-4">
             How It Works

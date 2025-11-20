@@ -18,9 +18,9 @@ export function NewEraSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white md:text-inherit">
-            <p className="text-sm font-semibold font-serif uppercase mb-4 text-center text-[#7c8e72]">COMING TO ATLANTA SPRING 2026</p>
+            <p className="text-sm font-semibold font-serif uppercase mb-4 text-center text-[#d95c47] md:text-[#7c8e72]">COMING TO ATLANTA SPRING 2026</p>
             <h2 className="font-serif text-4xl mb-6 md:text-[#0e2b47]">
-              Step Into a <em className="text-[#d95c47] md:text-[#d95c47] font-bold md:font-normal">New Era</em> of Childcare
+              Step Into a <span className="text-white md:text-[#d95c47] font-normal not-italic">New Era</span> of Childcare
             </h2>
             <p className="text-xl mb-4 md:text-[#0e2b47]">
               Built by parents, backed by HR and legal experts. With payroll, compliance, and backup taken care of, you can focus on what truly matters.

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+// Questions Section Component
 export function QuestionsSection() {
   return (
     <section className="bg-[#f4f1ea] py-8">

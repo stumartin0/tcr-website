@@ -1,10 +1,86 @@
 "use client"
 
+import { useState, useRef, useEffect } from 'react'
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export function PricingSection() {
+  const [activeTab, setActiveTab] = useState('full-time')
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
+
+  const tabs = [
+    { id: 'part-time', label: 'Part-Time' },
+    { id: 'full-time', label: 'Full-Time' },
+    { id: 'sharedcare', label: 'SharedCare™' },
+    { id: 'standby', label: 'Standby' },
+  ]
+
+  const usageTiers = [
+    {
+      id: 'part-time',
+      title: 'Part-Time',
+      subtitle: '<30 hrs/week',
+      description: 'Covers shift level infrastructure — adaptive compliance, caregiver rewards, and backup coverage.',
+      price: '$2.00',
+    },
+    {
+      id: 'full-time',
+      title: 'Full-Time',
+      subtitle: '30+ hrs/week',
+      description: 'Automatically reduced hourly rate — same adaptive compliance, caregiver rewards, and backup coverage.',
+      price: '$1.50',
+    },
+    {
+      id: 'sharedcare',
+      title: 'SharedCare™',
+      subtitle: 'Per Family',
+      description: 'Share a nanny with another household for up to six kids. Shifts are hosted in either home with full compliance.',
+      price: '$2',
+    },
+    {
+      id: 'standby',
+      title: 'Standby Care™',
+      subtitle: 'Backup',
+      description: 'Backup care if no one from your Reserve Team™ is available. Helps us reward caregiver availability.',
+      price: '$2.50',
+    },
+  ]
+
+  // Swipe gesture handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return
+    
+    const distance = touchStartX.current - touchEndX.current
+    const minSwipeDistance = 50
+
+    if (Math.abs(distance) > minSwipeDistance) {
+      const currentIndex = tabs.findIndex(tab => tab.id === activeTab)
+      
+      if (distance > 0 && currentIndex < tabs.length - 1) {
+        // Swipe left - next tab
+        setActiveTab(tabs[currentIndex + 1].id)
+      } else if (distance < 0 && currentIndex > 0) {
+        // Swipe right - previous tab
+        setActiveTab(tabs[currentIndex - 1].id)
+      }
+    }
+
+    touchStartX.current = 0
+    touchEndX.current = 0
+  }
+
+  const activeCard = usageTiers.find(tier => tier.id === activeTab) || usageTiers[1]
+
   return (
     <section className="bg-[#0e2b47] py-8">
       <div className="container mx-auto px-4">
@@ -93,58 +169,89 @@ export function PricingSection() {
         </div>
         
         <div className="max-w-2xl md:max-w-7xl lg:max-w-[90rem] mx-auto mb-12">
-          <div className="grid md:grid-cols-4 gap-3">
-            <div className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
+          {/* Mobile Tabs Interface (<768px) */}
+          <div className="md:hidden">
+            {/* Tabs Row */}
+            <div className="overflow-x-auto mb-4 scrollbar-hide">
+              <div className="flex gap-2 min-w-max pb-2">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`px-4 py-3 min-h-[44px] font-medium text-base whitespace-nowrap transition-all duration-200 ${
+                      activeTab === tab.id
+                        ? 'text-[#e07856] border-b-2 border-[#e07856]'
+                        : 'text-white hover:text-white/80'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Active Card Display */}
+            <div
+              key={activeTab}
+              className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col"
+              style={{
+                animation: 'fade-in 200ms ease-in-out',
+              }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div className="text-center mb-2">
-                <h3 className="font-serif text-lg text-[#0e2b47]">Part-Time</h3>
-                <p className="text-sm text-[#0e2b47]">{'<'}30 hrs/week</p>
+                <h3 className="font-serif text-lg text-[#0e2b47]">{activeCard.title}</h3>
+                <p className="text-sm text-[#0e2b47]">
+                  {activeCard.id === 'part-time' ? '<30 hrs/week' : 
+                   activeCard.id === 'full-time' ? '30+ hrs/week' :
+                   activeCard.id === 'sharedcare' ? 'Per Family' : 'Backup'}
+                </p>
                 <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
               </div>
               <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
-                Covers shift level infrastructure — adaptive compliance, caregiver rewards, and backup coverage.
+                {activeCard.description}
               </p>
               <div className="border-t pt-4 mb-4" />
-              <p className="font-serif text-3xl text-center"><span className="text-[#0e2b47]">$2.00</span><span className="text-lg font-serif"><span className="text-[#d95c47]">/</span><span className="text-[#0e2b47]">hr</span></span></p>
+              <p className="font-serif text-3xl text-center">
+                <span className="text-[#0e2b47]">{activeCard.price}</span>
+                <span className="text-lg font-serif">
+                  <span className="text-[#d95c47]">/</span>
+                  <span className="text-[#0e2b47]">hr</span>
+                </span>
+              </p>
             </div>
-            
-            <div className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
-              <div className="text-center mb-2">
-                <h3 className="font-serif text-lg text-[#0e2b47]">Full-Time</h3>
-                <p className="text-sm text-[#0e2b47]">30+ hrs/week</p>
-                <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
+          </div>
+
+          {/* Desktop Grid Layout (≥768px) */}
+          <div className="hidden md:grid md:grid-cols-4 gap-3">
+            {usageTiers.map((tier) => (
+              <div key={tier.id} className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
+                <div className="text-center mb-2">
+                  <h3 className={`font-serif text-lg text-[#0e2b47] ${tier.id === 'standby' ? 'whitespace-nowrap' : ''}`}>
+                    {tier.title}
+                  </h3>
+                  <p className="text-sm text-[#0e2b47]">
+                    {tier.id === 'part-time' ? '<30 hrs/week' : 
+                     tier.id === 'full-time' ? '30+ hrs/week' :
+                     tier.id === 'sharedcare' ? 'Per Family' : 'Backup'}
+                  </p>
+                  <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
+                </div>
+                <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
+                  {tier.description}
+                </p>
+                <div className="border-t pt-4 mb-4" />
+                <p className="font-serif text-3xl text-center">
+                  <span className="text-[#0e2b47]">{tier.price}</span>
+                  <span className="text-lg font-serif">
+                    <span className="text-[#d95c47]">/</span>
+                    <span className="text-[#0e2b47]">hr</span>
+                  </span>
+                </p>
               </div>
-              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
-                Automatically reduced hourly rate — same adaptive compliance, caregiver rewards, and backup coverage.
-              </p>
-              <div className="border-t pt-4 mb-4" />
-              <p className="font-serif text-3xl text-center"><span className="text-[#0e2b47]">$1.50</span><span className="text-lg font-serif"><span className="text-[#d95c47]">/</span><span className="text-[#0e2b47]">hr</span></span></p>
-            </div>
-            
-            <div className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
-              <div className="text-center mb-2">
-                <h3 className="font-serif text-lg text-[#0e2b47]">SharedCare™</h3>
-                <p className="text-sm text-[#0e2b47]">Per Family</p>
-                <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
-              </div>
-              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
-                Share a nanny with another household for up to six kids. Shifts are hosted in either home with full compliance.
-              </p>
-              <div className="border-t pt-4 mb-4" />
-              <p className="font-serif text-3xl text-center"><span className="text-[#0e2b47]">$2</span><span className="text-lg font-serif"><span className="text-[#d95c47]">/</span><span className="text-[#0e2b47]">hr</span></span></p>
-            </div>
-            
-            <div className="bg-[#f4f1ea] rounded-lg p-6 flex flex-col">
-              <div className="text-center mb-2">
-                <h3 className="font-serif text-lg text-[#0e2b47] whitespace-nowrap">Standby Care™</h3>
-                <p className="text-sm text-[#0e2b47]">Backup</p>
-                <p className="text-sm text-[#d95c47] mt-2">(auto-applied)</p>
-              </div>
-              <p className="text-sm text-[#0e2b47]/70 mb-4 flex-grow">
-                Backup care if no one from your Reserve Team™ is available. Helps us reward caregiver availability.
-              </p>
-              <div className="border-t pt-4 mb-4" />
-              <p className="font-serif text-3xl text-center"><span className="text-[#0e2b47]">$2.50</span><span className="text-lg font-serif"><span className="text-[#d95c47]">/</span><span className="text-[#0e2b47]">hr</span></span></p>
-            </div>
+            ))}
           </div>
         </div>
         
