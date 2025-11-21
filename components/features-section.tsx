@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 const features = [
   {
     icon: '✓',
-    title: 'Trust your backups',
-    description: '— trusted faces, not random fill-ins'
+    title: 'Become a legal employer',
+    description: '— set up in just minutes'
   },
   {
     icon: '✓',
@@ -19,8 +19,8 @@ const features = [
   },
   {
     icon: '✓',
-    title: 'Become a legal employer',
-    description: '— set up in just minutes'
+    title: 'Trust your backups',
+    description: '— trusted faces, not random fill-ins'
   },
   {
     icon: '✓',

@@ -88,9 +88,9 @@ export function PricingSection() {
           <Image 
             src="/image(1).png" 
             alt="" 
-            width={48} 
-            height={48} 
-            className="mx-auto mb-6"
+            width={32} 
+            height={32} 
+            className="mx-auto mt-8 mb-6"
           />
           <h2 className="font-serif text-4xl mb-4">
             Clear Pricing.<br/>Tailored to <em className="text-[#d95c47]">You</em>.

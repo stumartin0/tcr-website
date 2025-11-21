@@ -73,8 +73,8 @@ export function ComparisonGridSection() {
                         <Image
                           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-i1MbqZnCZzeYF7x6P2hSUNu0cJuVIS.png"
                           alt="The Care Reserve"
-                          width={40}
-                          height={40}
+                          width={36}
+                          height={36}
                         />
                       </div>
                     </th>

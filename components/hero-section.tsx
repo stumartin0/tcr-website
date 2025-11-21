@@ -68,16 +68,6 @@ export function HeroSection() {
               <Button size="lg" className="bg-[#0e2b47] text-white hover:bg-[#1a3f5f] w-full md:w-auto">
                 How it Works
               </Button>
-              {/* Icon centered below buttons on mobile only */}
-              <div className="flex justify-center md:block">
-                <Image 
-                  src="/image(1).png" 
-                  alt="TCR Icon" 
-                  width={40} 
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </div>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export function HowItWorksSection() {
   return (
@@ -39,6 +40,13 @@ export function HowItWorksSection() {
       
       <div className="container mx-auto px-4 max-w-4xl mt-24 md:mt-0">
         <div className="text-center mb-12 md:mb-16">
+          <Image 
+            src="/image(1).png" 
+            alt="" 
+            width={32} 
+            height={32} 
+            className="mx-auto mt-8 mb-6"
+          />
           <h2 className="text-3xl md:text-4xl font-serif text-[#0e2b47] mb-4">
             How It Works
           </h2>
@@ -91,7 +99,7 @@ export function HowItWorksSection() {
             </div>
             <div className="flex-1">
               <h3 className="text-2xl font-serif text-[#0e2b47] mb-3">
-                Build Your Backup Plan — with Reserve Team™
+                Make Your Backup Plan — with Reserve Team™
               </h3>
               <p className="text-base text-[#0e2b47] leading-relaxed">
                 Bring your own or invite TCR Verified™ caregivers to build your Reserve Team™ — your first-call for backup. When unavailable, access Standby Care™: you choose who comes, never auto-assigned.

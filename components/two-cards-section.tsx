@@ -1,7 +1,6 @@
 "use client"
 
 import { Check } from 'lucide-react'
-import Image from 'next/image'
 
 export function TwoCardsSection() {
   return (
@@ -185,16 +184,6 @@ export function TwoCardsSection() {
           <p className="text-xl text-white font-serif max-w-3xl mx-auto">
             The Care Reserve makes in-home childcare simple, secure, and tailored to your family — so you can feel confident, and your children can <em className="text-[#d95c47]">thrive</em>.
           </p>
-        </div>
-        
-        <div className="text-center">
-          <Image 
-            src="/image(1).png" 
-            alt="" 
-            width={48} 
-            height={48} 
-            className="mx-auto mb-6"
-          />
         </div>
       </div>
     </section>

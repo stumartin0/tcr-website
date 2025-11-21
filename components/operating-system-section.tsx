@@ -1,11 +1,19 @@
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export function OperatingSystemSection() {
   return (
-    <section className="bg-[#0e2b47] py-16 md:py-24">
+    <section className="bg-[#0e2b47] pt-8 pb-16 md:pb-24">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 max-w-4xl mx-auto">
+          <Image 
+            src="/image(1).png" 
+            alt="" 
+            width={32} 
+            height={32} 
+            className="mx-auto mt-8 mb-6"
+          />
           <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
             In-Home Childcare's First <em className="text-[#d95c47] font-serif">All-in-One</em> Operating System
           </h2>
@@ -41,10 +49,10 @@ export function OperatingSystemSection() {
               </svg>
             </div>
             <h3 className="text-xl font-serif text-[#0e2b47] mb-3">
-              Always Compliant, Automatically
+              Stay Compliant, Automatically
             </h3>
             <p className="text-[#0e2b47]/70 leading-relaxed">
-              The only platform that validates every shift and paycheck before it runs — keeping you legally protected in real time.
+              Every shift and paycheck is validated automatically — keeping you compliant with local rules without the worry.
             </p>
           </div>
 

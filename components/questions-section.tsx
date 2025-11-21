@@ -6,7 +6,7 @@ export function QuestionsSection() {
     <section className="bg-[#f4f1ea] py-8">
       <div className="container mx-auto px-4">
         <h1 className="font-serif text-4xl text-center mb-12 text-[#0e2b47]">
-          Questions? We have <em className="text-[#d95c47]">answers</em>.
+          Questions? We have <span className="text-[#0e2b47]">answers</span>.
         </h1>
         
         <div className="grid md:grid-cols-3 gap-6">
